@@ -1,0 +1,55 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-heading: 'Crimson Text', serif;
+  --font-body: 'Hanken Grotesk', sans-serif;
+  --bg-color: #FFFEFD;
+  --first-color: #21243D;
+  --second-color: #222D82;
+  --third-color: #FF7999;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--first-color);
+}
+
+h1 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+
+/* Links */
+a {
+  color: var(--first-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+button {
+  background-color: var(--bg-color);
+  color: var(--second-color);
+  border: solid 1px var(--second-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: whitesmoke;
+}
