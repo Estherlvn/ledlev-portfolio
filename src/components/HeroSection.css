@@ -1,3 +1,5 @@
+/* General */
+
 .hero {
   background-color: #FFFEFD;
   display: flex;
@@ -7,7 +9,6 @@
   gap: 3rem;
   padding: 250px;
 }
-
   
   .hero-profile {
     padding: 50px;
@@ -16,8 +17,8 @@
   .hero-image {
     height: 200px;
     object-fit: cover;
-    box-shadow: 2px 2px 4px var(--third-color);
-  }
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  }  
 
   .hero-content, h2 {
     font-size: 1.3rem;
@@ -30,11 +31,84 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
     padding: 1rem;
   }
-  
-  .hero-button {
+
+  .button-section {
     align-self: flex-end;
   }
+
+  /* Effects */
+  
+  .hero-button {
+      --color: #814883;
+      width: 8em;
+      height: 2.6em;
+      line-height: 2.5em;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border: 1px solid var(--color);
+      transition: color 0.5s;
+      z-index: 1;
+      font-size: 14px;
+      border-radius: 4px;
+      font-weight: 500;
+      color: var(--color);
+      background: transparent;
+  }
+  
+  /* Pseudo-élément animé */
+  .hero-button::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    background: var(--color);
+    z-index: -1;
+    transition: all 0.7s;
+  }
+  
+  /* Effet au survol */
+  .hero-button:hover {
+    color: white;
+  }
+  
+  .hero-button:hover::before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  /* Clic */
+  .hero-button:active::before {
+    background: rgb(32, 7, 90);
+    transition: background 0s;
+  }
+  
+  
+  
+  .hand-underline {
+    line-height: 1.5;
+    display: inline;
+    background-image: linear-gradient(
+      transparent 50%,
+      #fee1ff 50%,
+      #f1d0f2 85%,
+      transparent 85%,
+      transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    animation: animatedUnderline 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+  }
+
+  @keyframes animatedUnderline {
+    to {
+      background-size: 100% 100%;
+    }
+  }
+  
   

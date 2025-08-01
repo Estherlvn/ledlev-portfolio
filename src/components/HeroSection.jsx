@@ -11,11 +11,15 @@ const HeroSection = () => {
         />
       </div>
       <div className="hero-content">
-        <h1>Esther,<br /> Développeuse web Fullstack</h1>
+        <h1>
+          Esther,<br />
+          Développeuse web&nbsp;&nbsp;
+           <span className="hand-underline">Fullstack</span>
+        </h1>
         <h2>Créative & Passionnée</h2>
-        <div className="hero-button">
+        <div className="button-section">
           <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-            <button>Téléchargez mon CV</button>
+            <button className='hero-button'>Mon CV</button>
           </a>
         </div>
       </div>
