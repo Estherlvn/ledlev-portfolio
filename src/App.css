@@ -11,7 +11,8 @@
   --bg-color: #FFFEFD;
   --first-color: #21243D;
   --second-color: #222D82;
-  --third-color: #FF7999;
+  /* --third-color: #FF7999; */
+  --third-color: #d49dd5;
 }
 
 body {
@@ -20,12 +21,18 @@ body {
   color: var(--first-color);
 }
 
-h1 {
+
+
+h1, h3 {
   font-family: var(--font-heading);
 }
 
 h1 {
   font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 

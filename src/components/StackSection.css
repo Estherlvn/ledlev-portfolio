@@ -1,0 +1,70 @@
+/* StackSection.css */
+
+/* Conteneur principal en flex pour centrer verticalement et horizontalement */
+.stack-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  /* En-tête de la section */
+  .stack-header {
+    margin-bottom: 3rem;
+    
+  }
+  
+  .stack-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--third-color);
+    margin: 0 auto 1rem auto;
+    border-radius: 2px;
+  }
+  
+  .stack-header h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stack-header p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Grille des catégories */
+  .stack-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+  }
+  
+  /* Une catégorie */
+  /* .stack-category {
+    flex: 1 1 200px;
+  }
+   */
+  .stack-category h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .stack-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
