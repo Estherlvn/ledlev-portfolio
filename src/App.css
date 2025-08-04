@@ -46,4 +46,10 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Button */
+.header-line {
+  width: 120px;
+  height: 3px;
+  background-color: var(--third-color);
+  margin-bottom: 30px;
+  border-radius: 2px;
+}

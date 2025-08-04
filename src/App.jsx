@@ -1,6 +1,7 @@
 import Navbar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import StackSection from './components/StackSection';
+import ExperienceSection from './components/ExperienceSection';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <HeroSection />
       </section>
       <StackSection />
+      <ExperienceSection />
       <section id="projects" style={{ height: '100vh' }}>
         <h1>Projets</h1>
       </section>

@@ -11,7 +11,7 @@ const StackSection = () => {
   return (
     <section className="stack-section" id="stack">
       <div className="stack-header">
-        <div className="stack-line"></div>
+        <div className="header-line"></div>
         <h3>Stack Technique</h3>
         <p>
           Les langages et frameworks avec lesquels je travaille le plus, et les outils du quotidien.

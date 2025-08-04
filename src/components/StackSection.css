@@ -12,14 +12,6 @@
     margin-bottom: 3rem;
   }
   
-  .stack-line {
-    width: 10%;
-    height: 3px;
-    background-color: var(--third-color);
-    margin-bottom: 30px;
-    border-radius: 2px;
-  }
-  
   .stack-header h3 {
     font-size: 1.8rem;
   }
@@ -35,6 +27,7 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-top: 20px;
   }
   
   /* Une catégorie */

@@ -1,0 +1,102 @@
+/* Conteneur principal */
+.experience-section {
+    display: flex;
+    flex-direction: row;
+    padding: 15rem 20rem;
+  }
+
+  /* Partie gauche avec le titre et description */
+  .experience-left {
+    flex: 1;
+  }
+  
+  .experience-left h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .experience-left p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    width: 115%;
+  }
+  
+  /* Partie droite avec la timeline */
+  .experience-right {
+    flex: 2;
+    position: relative;
+  }
+  
+  /* Ligne verticale */
+  .timeline {
+    position: relative;
+    border-left: 2px solid #ccc;
+    height: 500px;
+    width: 90%;
+    margin-left: 100px;
+  }
+  
+  /* Élément de la timeline */
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+  
+  /* Point central */
+  .timeline-dot {
+    position: absolute;
+    left: -21px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid #814883;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Contenu de chaque carte */
+  .timeline-content {
+    margin-left: 3rem;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #ddd;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.2rem;
+    color: #2b3b8c;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  
+  .timeline-content p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content span {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .badge {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px 12px;
+    border-radius: 12px;
+    gap: 10px;
+    border: solid 1px #a0a0a0;
+    gap: 10px;
+  }
+  
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
