@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: row;
     padding: 15rem 20rem;
+    gap: 12rem;
   }
 
   /* Partie gauche avec le titre et description */
@@ -32,9 +33,7 @@
   .timeline {
     position: relative;
     border-left: 2px solid #ccc;
-    height: 500px;
-    width: 90%;
-    margin-left: 100px;
+    height: 80%;
   }
   
   /* Élément de la timeline */
@@ -46,27 +45,55 @@
   /* Point central */
   .timeline-dot {
     position: absolute;
-    left: -21px;
-    width: 40px;
-    height: 40px;
+    left: -26px;
+    width: 50px;
+    height: 50px;
     background-color: white;
-    border: 2px solid #814883;
+    border: 3px solid #ffffff;
     border-radius: 50%;
+    overflow: hidden;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
   }
+  
+  .timeline-dot img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
   
   /* Contenu de chaque carte */
   .timeline-content {
+    position: relative;
     margin-left: 3rem;
     padding: 1rem 1.5rem;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 0 1px #ddd;
+    /* box-shadow: 0 0 0 1px #ddd; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: solid 1px #ccc;
+  }
+  
+  .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 1.2rem;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid #ccc;  /* couleur du triangle de timeline-content vers timeline-dot */
   }
   
   .timeline-content h4 {
-    font-size: 1.2rem;
-    color: #2b3b8c;
+    font-size: 1.1rem;
+    color: var(--first-color);
     margin-bottom: 0.3rem;
     font-weight: 500;
   }
@@ -93,10 +120,26 @@
     gap: 10px;
   }
   
+
   .content-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    /* gap: 1rem; */
+    flex-wrap: wrap; /* permet de passer à la ligne pour jouer avec les media-query */
+  }
+  
+
+  /* Responsive */
+
+  @media (max-width: 1780px) {
+    .content-header {
+      flex-direction: column-reverse; /* la badge passe au dessus du titre (intervertion) */
+      align-items: flex-start; /* aligne à gauche */
+    }
+  
+    .badge {
+      margin-bottom: 0.5rem; /* espace sous le badge */
+    }
   }
   
