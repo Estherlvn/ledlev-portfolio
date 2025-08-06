@@ -42,7 +42,12 @@ const ExperienceSection = () => {
       <div className="experience-left">
       <div className="header-line"></div>
         <h3>Expériences et formation</h3>
-        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+        <p>Chaque étape de mon parcours m’a permis d'acquérir de nouvelles compétences et de renforcer ma confiance en tant que développeuse fullstack.</p>
+        <div className="button-cv">
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <button className='hero-button'>Mon CV</button>
+          </a>
+        </div>
       </div>
 
       <div className="experience-right">
@@ -54,17 +59,15 @@ const ExperienceSection = () => {
               </div>
               <div className="timeline-content">
               <div className="content-header">
-  <h4>{exp.title}</h4>
-  <div className="badge">
-    <i className={exp.icon}></i>
-    <span>{exp.badge}</span>
-  </div>
-</div>
-
+                <h4>{exp.title}</h4>
+                <div className="badge">
+                  <i className={exp.icon}></i>
+                  <span>{exp.badge}</span>
+                </div>
+              </div>
               <p>{exp.company}</p>
               <span>{exp.date}</span>
           </div>
-
             </div>
           ))}
         </div>

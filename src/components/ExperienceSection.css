@@ -22,6 +22,11 @@
     line-height: 1.6;
     width: 115%;
   }
+
+  .button-cv {
+    margin-top: 3rem;
+  }
+
   
   /* Partie droite avec la timeline */
   .experience-right {
@@ -120,7 +125,6 @@
     gap: 10px;
   }
   
-
   .content-header {
     display: flex;
     justify-content: space-between;
@@ -134,7 +138,7 @@
 
   @media (max-width: 1780px) {
     .content-header {
-      flex-direction: column-reverse; /* la badge passe au dessus du titre (intervertion) */
+      flex-direction: column-reverse; /* la badge passe au dessus du titre (interversion) */
       align-items: flex-start; /* aligne à gauche */
     }
   

@@ -1,14 +1,16 @@
 /* General */
 
-.hero {
-  background-color: #FFFEFD;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  padding: 250px;
+.welcome {
+  padding: 200px;
 }
+
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
   
   .hero-profile {
     padding: 50px;
@@ -34,32 +36,38 @@
     padding: 1rem;
   }
 
-  .button-section {
-    align-self: flex-end;
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0 150px;
   }
 
-  /* Effects */
-  
-  .hero-button {
-      --color: #814883;
-      width: 8em;
-      height: 2.6em;
-      line-height: 2.5em;
-      position: relative;
-      cursor: pointer;
-      overflow: hidden;
-      border: 1px solid var(--color);
-      transition: color 0.5s;
-      z-index: 1;
-      font-size: 14px;
-      border-radius: 4px;
-      font-weight: 500;
-      color: var(--color);
-      background: transparent;
+  .hero-button2 {
+    --color: #814883;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid var(--color);
+    transition: color 0.5s, background 0.5s;
+    z-index: 1;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: white;
+    background: var(--color);
+    margin-left: 50px;
   }
   
-  /* Pseudo-élément animé */
-  .hero-button::before {
+  /* Animation du pseudo-élément */
+  .hero-button2::before {
     content: "";
     position: absolute;
     top: 100%;
@@ -67,31 +75,30 @@
     height: 150px;
     width: 200px;
     border-radius: 50%;
-    background: var(--color);
+    background: white;
     z-index: -1;
     transition: all 0.7s;
   }
   
-  /* Effet au survol */
-  .hero-button:hover {
-    color: white;
+  /* Hover : fond transparent, texte coloré */
+  .hero-button2:hover {
+    color: var(--color);
+    background: white;
   }
   
-  .hero-button:hover::before {
+  .hero-button2:hover::before {
     top: -30px;
     left: -30px;
   }
   
   /* Clic */
-  .hero-button:active::before {
-    background: rgb(32, 7, 90);
+  .hero-button2:active::before {
+    background: rgb(240, 240, 240);
     transition: background 0s;
   }
   
-  
-  
+
   .hand-underline {
-    line-height: 1.5;
     display: inline;
     background-image: linear-gradient(
       transparent 50%,
@@ -102,7 +109,7 @@
     );
     background-repeat: no-repeat;
     background-size: 0% 100%;
-    animation: animatedUnderline 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+    animation: animatedUnderline 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
   }
 
   @keyframes animatedUnderline {
@@ -111,4 +118,54 @@
     }
   }
   
+
+  /* Scroll down */
+
+  .arrows {
+    width: 30px;
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    bottom: 55px;
+  }  
+  
+  .arrows path {
+    stroke: #2994D1;
+    fill: transparent;
+    stroke-width: 1px;	
+    animation: arrow 3s infinite;
+    -webkit-animation: arrow 3s infinite; 
+  }
+  
+  @keyframes arrow
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  @-webkit-keyframes arrow /*Safari and Chrome*/
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  .arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a3 {	
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }
   
