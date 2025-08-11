@@ -1,0 +1,143 @@
+.projects-section {
+    padding: 5rem 20rem 0 20rem;
+  }
+  
+  .projects-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .projects-head h3 {
+    font-size: 1.8rem;
+  }
+  
+  .see-all {
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--primary, #2a3c8c);
+    border-bottom: 1px solid transparent;
+  }
+  .see-all:hover { border-color: currentColor; }
+  
+  /* list */
+  .projects-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* each project row */
+  .project-item {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+    gap: 5rem;
+    padding: 2rem 6rem;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+  
+  .project-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.08); }
+  
+  /* left image */
+  .project-thumb {
+    width: 90%;
+    max-width: 320px;
+    aspect-ratio: 16/10;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06), 0 6px 20px rgba(0,0,0,0.05);
+  }
+  .project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* right content */
+  /* .project-content { padding: 0rem 6rem; } */
+  
+  .project-topline {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .35rem;
+  }
+  
+  .year-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    height: 32px;
+    padding: 0 .75rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .95rem;
+    color: #11203a;
+    background: #e7f0ff;
+    box-shadow: inset 0 0 0 1px rgba(17,32,58,0.06);
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    color: #1c2b6b;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  
+  .project-techs {
+    margin: 1rem 0 0.75rem;
+    font-size: .98rem;
+    color: #2f4a9a;
+  }
+  
+  .project-desc {
+    color: #3e4253;
+    line-height: 1.6;
+    margin: 0 0 .75rem;
+  }
+  
+  /* links (github / external) */
+  .project-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    color: #1f2b6c;
+    background: #fff;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .2s ease;
+  }
+  .icon-link i { font-size: 16px; }
+  .icon-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  }
+  
+  /* responsive */
+  @media (max-width: 900px) {
+    .project-item {
+      grid-template-columns: 1fr;
+    }
+    .project-thumb { max-width: none; }
+    .project-topline {
+      grid-template-columns: 1fr;
+      gap: .5rem;
+    }
+    .year-badge { width: max-content; }
+  }
+  
