@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import StackSection from './components/StackSection';
 import ExperienceSection from './components/ExperienceSection';
 import ProjectSection from './components/ProjectSection';
+import ContactSection from './components/ContactSection';
 import './App.css';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <ProjectSection />
       </section>
       <section id="contact" style={{ height: '100vh' }}>
-        <h1>Contact</h1>
+      <ContactSection />
       </section>
     </>
   );

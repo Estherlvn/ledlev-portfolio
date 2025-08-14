@@ -1,0 +1,95 @@
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: start;
+    gap: 12rem;
+    padding: 8rem 20rem;
+  }
+  
+  /* colonne gauche */
+  .contact-left .header-line {
+    width: 80px;
+    height: 3px;
+    background: var(--third-color, #814883);
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-left h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-left p {
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .contact-left a {
+    color: #2b3b8c;
+    text-decoration: underline;
+  }
+  
+  .thanks { margin-top: 3.5rem; }
+  .signature { font-weight: 600; margin-top: 2rem; }
+
+  /* icônes */
+  .socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .socials i {
+    font-size: 1.6rem;
+    color: #21243D;
+    transition: transform .2s ease, color .2s ease;
+  }
+  .socials a:hover i { transform: translateY(-2px); color: var(--third-color, #814883); }
+  
+  /* colonne droite (formulaire) */
+  .contact-right {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-right label {
+    font-size: 0.95rem;
+  }
+  
+  .contact-right input,
+  .contact-right textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1.5px solid #2b3b8c;
+    border-radius: 6px;
+    outline: none;
+    font: inherit;
+    background: #fff;
+  }
+  
+  .contact-right input:focus,
+  .contact-right textarea:focus {
+    box-shadow: 0 0 0 3px rgba(43,59,140,.12);
+  }
+  
+  /* bouton envoyer (réutilise .hero-button existant) */
+  .contact-right .hero-button {
+    justify-self: end;
+    margin-top: .5rem;
+  }
+  
+  /* responsive */
+  @media (max-width: 1200px) {
+    .contact-section { padding: 6rem 8rem; }
+  }
+  
+  @media (max-width: 900px) {
+    .contact-section {
+      grid-template-columns: 1fr;
+      padding: 5rem 2rem;
+      gap: 3rem;
+    }
+    .contact-right .hero-button { justify-self: start; }
+  }
+  
