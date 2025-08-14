@@ -15,7 +15,7 @@ const ContactSection = () => {
           Contactez‑moi et discutons ensemble de votre futur projet !
           <br />
           Je suis joignable également sur{" "}
-          <a href="https://www.linkedin.com/in/ton-profil" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/esther-led-lev/" target="_blank" rel="noreferrer">
             LinkedIn
           </a>.
         </p>
@@ -27,7 +27,7 @@ const ContactSection = () => {
           <a href="https://www.linkedin.com/in/esther-led-lev/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <i className="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://github.com/ton-github" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <a href="https://github.com/Estherlvn" target="_blank" rel="noreferrer" aria-label="GitHub">
             <i className="fa-brands fa-github"></i>
           </a>
         </div>
