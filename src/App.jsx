@@ -4,6 +4,7 @@ import StackSection from './components/StackSection';
 import ExperienceSection from './components/ExperienceSection';
 import ProjectSection from './components/ProjectSection';
 import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -18,9 +19,10 @@ function App() {
       <section id="projects" style={{ height: '100vh' }}>
       <ProjectSection />
       </section>
-      <section id="contact" style={{ height: '100vh' }}>
+      <section id="contact" style={{ height: '80vh' }}>
       <ContactSection />
       </section>
+      <Footer />
     </>
   );
 }

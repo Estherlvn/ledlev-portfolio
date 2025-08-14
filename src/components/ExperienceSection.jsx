@@ -44,7 +44,7 @@ const ExperienceSection = () => {
         <h3>Expériences et formation</h3>
         <p>Chaque étape de mon parcours m’a permis d'acquérir de nouvelles compétences et de renforcer ma confiance en tant que développeuse fullstack.</p>
         <div className="button-cv">
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="assets/cv.portfolio.pdf" target="_blank" rel="noopener noreferrer">
             <button className='hero-button'>Mon CV</button>
           </a>
         </div>

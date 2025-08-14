@@ -1,5 +1,12 @@
 import './HeroSection.css';
 
+const handleScroll = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const HeroSection = () => {
   return (
     <section id="home" className='welcome'>
@@ -28,9 +35,13 @@ const HeroSection = () => {
         </div>
 
         <div className="p-button">
-            <button className='hero-button'>Parcours</button>
-            <button className='hero-button2'>Projets</button>
-        </div>     
+        <button className="hero-button" onClick={() => handleScroll('experience')}>
+          Parcours
+        </button>
+        <button className="hero-button2" onClick={() => handleScroll('projects')}>
+          Projets
+        </button>
+      </div>
 
         <svg className="arrows" viewBox="0 0 60 80" preserveAspectRatio="xMidYMid meet">
           {/* <path class="a1" d="M0 0 L30 32 L60 0"></path> */}
