@@ -11,16 +11,20 @@
   --bg-color: #FFFEFD;
   --first-color: #21243D;
   --second-color: #222D82;
-  /* --third-color: #FF7999; */
   --third-color: #d49dd5;
 }
+
+::selection {
+  background-color: var(--third-color);
+  color: #FFFEFD;
+}
+
 
 body {
   font-family: var(--font-body);
   background-color: var(--bg-color);
   color: var(--first-color);
 }
-
 
 
 h1, h3 {
