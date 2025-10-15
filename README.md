@@ -45,6 +45,7 @@ git clone https://github.com/Estherlvn/ledlev-portfolio.git
 cd ledlev-portfolio
 npm install
 npm run dev
+(attention: configuration d'un fichier firebase en local nécessaire)
 ```
 
 ## Auteur
