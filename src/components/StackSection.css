@@ -53,3 +53,36 @@
     margin: 0.5rem;
   }
   
+  /* Taille des icônes responsive */
+.tech-icon {
+  font-size: 2rem; /* taille par défaut pour grands écrans */
+  margin: 0.5rem;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .tech-icon {
+    font-size: 1.7rem;
+  }
+}
+
+/* Tablette */
+@media (max-width: 900px) {
+  .tech-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .tech-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Très petit mobile */
+@media (max-width: 400px) {
+  .tech-icon {
+    font-size: 1.1rem;
+  }
+}

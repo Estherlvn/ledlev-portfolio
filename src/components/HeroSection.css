@@ -17,7 +17,7 @@
   }
   
   .hero-image {
-    height: 200px;
+    height: 170px;
     object-fit: cover;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
   }  
@@ -169,3 +169,193 @@
     -webkit-animation-delay:0s; /* Safari 和 Chrome */
   }
   
+  /* @media (max-width: 1725px ) {
+    .presentation {
+    margin-top: 1rem;
+      }
+      .hero-image {
+    height: 170px;
+    }
+    h1 {
+    font-size: 2rem;
+    }
+    .arrows {
+    bottom: 20px;
+    } */
+
+
+    /* ----------------------------
+   Responsive breakpoints ajoutés
+   Ne modifie pas les règles existantes, uniquement des overrides
+   ---------------------------- */
+
+/* MOBILE : <= 600px (mobile-first) */
+@media (max-width: 600px) {
+  .welcome {
+    padding: 2.5rem; /* remplace 200px sur petits écrans */
+  }
+
+  .hero {
+    flex-direction: column; /* empile les éléments */
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1rem;
+  }
+
+  .hero-profile {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image {
+    height: auto;
+    width: min(280px, 48%);
+    max-width: 320px;
+    object-fit: cover;
+    box-shadow: 4px 6px 10px rgba(0,0,0,0.14);
+  }
+
+  .hero-content, h2 {
+    font-size: 1.05rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-content {
+    align-items: center; /* centré sur mobile */
+    padding: 0.75rem;
+  }
+
+  .presentation {
+    padding: 0 1rem;
+    margin-top: 1.25rem;
+    gap: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .hero-button2 {
+    margin-left: 0; /* supprime le décalage latéral sur mobile */
+    width: auto;
+    padding: 0.45rem 0.9rem;
+    font-size: 13px;
+  }
+
+  .arrows {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* TABLETTE : 601px - 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .welcome {
+    padding: 3.5rem 3rem; /* réduit le padding fixe */
+  }
+
+  .hero {
+    flex-direction: row; /* côté à côte si l'espace le permet */
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2rem;
+  }
+
+  .hero-profile {
+    padding: 1.5rem;
+  }
+
+  .hero-image {
+    height: 170px;
+    max-width: 280px;
+  }
+
+  .hero-content, h2 {
+    font-size: 1.15rem;
+    text-align: left;
+  }
+
+  .presentation {
+    padding: 0 80px;
+    margin-top: 1.75rem;
+    font-size: 1.05rem;
+  }
+
+  .hero-button2 {
+    margin-left: 20px;
+  }
+
+  .arrows {
+    bottom: 35px;
+  }
+}
+
+/* DESKTOP : >= 1025px (desktop classique) */
+@media (min-width: 1025px) {
+  .welcome {
+    padding: 6rem 6rem; /* moins extrême que 200px fixes, mais espace généreux */
+  }
+
+  .hero {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-profile {
+    padding: 2rem;
+  }
+
+  .hero-content, h2 {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .presentation {
+    padding: 0 120px;
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  .hero-button2 {
+    margin-left: 50px; /* conserve le style initial sur desktop */
+  }
+
+  .arrows {
+    bottom: 55px;
+  }
+}
+
+/* LARGE DESKTOP : >= 1366px (ajustements fins) */
+@media (min-width: 1366px) {
+  .welcome {
+    padding: 7rem 10rem;
+  }
+
+  .hero {
+    gap: 3.5rem;
+  }
+
+  .hero-image {
+    height: 170px;
+    max-width: 380px;
+  }
+
+  .presentation {
+    padding: 0 150px; /* valeur d'origine */
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .arrows {
+    bottom: 55px;
+  }
+}

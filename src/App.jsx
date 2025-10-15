@@ -16,10 +16,10 @@ function App() {
       </section>
       <StackSection />
       <ExperienceSection />
-      <section id="projects" style={{ height: '100vh' }}>
+      <section id="projects" >
       <ProjectSection />
       </section>
-      <section id="contact" style={{ height: '80vh' }}>
+      <section id="contact" style={{ height: '100vh' }}>
       <ContactSection />
       </section>
       <Footer />

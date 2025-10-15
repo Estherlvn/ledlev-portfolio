@@ -2,7 +2,7 @@
 .experience-section {
     display: flex;
     flex-direction: row;
-    padding: 15rem 20rem 10rem 20rem;
+    padding: 10rem 20rem 6rem 20rem;
     gap: 12rem;
   }
 
@@ -145,5 +145,24 @@
     .badge {
       margin-bottom: 0.5rem; /* espace sous le badge */
     }
+
+    @media (max-width: 1400px) {
+  .experience-section {
+    flex-direction: column; /* empile les parties gauche et droite */
+    gap: 3rem;
+  }
+
+  .experience-left,
+  .experience-right {
+    width: 100%; /* s'assure que chaque partie prend toute la largeur */
+  }
+
+  .experience-right {
+    margin-top: 3rem; /* petit espace entre les deux sections */
+  }
+}
+
+
+
   }
   

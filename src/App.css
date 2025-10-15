@@ -32,7 +32,7 @@ h1, h3 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 h3 {
@@ -108,3 +108,26 @@ a:hover {
   background: rgb(32, 7, 90);
   transition: background 0s;
 }
+
+/* === Responsive === */
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .hero-button {
+    width: 7em;
+    height: 2.4em;
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero-button {
+    width: 6.5em;
+    height: 2.2em;
+    font-size: 12px;
+    line-height: 2.2em;
+  }
+}
+
+
