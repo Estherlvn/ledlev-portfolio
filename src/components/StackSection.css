@@ -1,88 +1,238 @@
 /* StackSection.css */
 
-/* Conteneur principal en flex pour centrer verticalement et horizontalement */
+/* ============================================
+   STYLES DE BASE (Desktop par défaut)
+   Garde les valeurs d'origine pour grands écrans
+   ============================================ */
+
+/* Conteneur principal */
 .stack-section {
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 20rem;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 20rem; /* Valeur d'origine conservée */
 }
-  
-  /* En-tête de la section */
-  .stack-header {
-    margin-bottom: 3rem;
+
+/* En-tête de la section */
+.stack-header {
+  margin-bottom: 3rem;
+}
+
+.stack-header h3 {
+  font-size: 1.8rem;
+}
+
+.stack-header p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 25px;
+}
+
+/* Grille des catégories */
+.stack-categories {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 20px;
+}
+
+/* Une catégorie */
+.stack-category h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.stack-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tech-icon {
+  font-size: 2rem; /* Réduit de 2.2rem à 2rem */
+  margin: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* MOBILE : ≤ 600px */
+@media (max-width: 600px) {
+  .stack-section {
+    padding: 2.5rem;
   }
-  
+
+  .stack-header {
+    margin-bottom: 2rem;
+    /* text-align: center; */
+  }
+
+  .stack-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .stack-header p {
+    font-size: 1rem;
+    margin-top: 15px;
+    padding: 0 0.5rem;
+  }
+
+  .stack-categories {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .stack-category {
+    width: 100%;
+  }
+
+  .stack-category h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .stack-icons {
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .tech-icon {
+    font-size: 1.6rem; /* Réduit de 1.8rem */
+    margin: 0.3rem;
+  }
+}
+
+/* TABLETTE : 601px - 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .stack-section {
+    padding: 3.5rem 3rem;
+  }
+
+  .stack-header {
+    margin-bottom: 2.5rem;
+  }
+
   .stack-header h3 {
     font-size: 1.8rem;
   }
-  
+
   .stack-header p {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 25px;
-  }
-  
-  /* Grille des catégories */
-  .stack-categories {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    font-size: 1.05rem;
     margin-top: 20px;
   }
-  
-  /* Une catégorie */
-  /* .stack-category {
-    flex: 1 1 200px;
+
+  .stack-categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.75rem;
+    justify-content: center;
   }
-   */
+
+  .stack-category {
+    flex: 1 1 280px;
+    min-width: 280px;
+  }
+
   .stack-category h4 {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #333;
+    text-align: center;
   }
-  
+
   .stack-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 1rem;
   }
-  
+
   .tech-icon {
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* Réduit de 2rem */
+    margin: 0.4rem;
+  }
+}
+
+/* DESKTOP : 1025px - 1365px */
+@media (min-width: 1025px) and (max-width: 1365px) {
+  .stack-section {
+    padding: 6rem 6rem;
+  }
+
+  .stack-header {
+    margin-bottom: 3rem;
+  }
+
+  .stack-header h3 {
+    font-size: 2rem;
+  }
+
+  .stack-header p {
+    font-size: 1rem;
+    margin-top: 25px;
+  }
+
+  .stack-categories {
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .stack-category {
+    flex: 1 1 200px;
+  }
+
+  .stack-category h4 {
+    font-size: 1.2rem;
+  }
+
+  .tech-icon {
+    font-size: 2rem;
     margin: 0.5rem;
   }
-  
-  /* Taille des icônes responsive */
-.tech-icon {
-  font-size: 2rem; /* taille par défaut pour grands écrans */
-  margin: 0.5rem;
 }
 
-/* Laptop */
-@media (max-width: 1200px) {
+/* LARGE DESKTOP : ≥ 1366px */
+@media (min-width: 1366px) {
+  .stack-section {
+    padding: 8rem 16rem;
+  }
+
+  .stack-header {
+    margin-bottom: 3rem;
+  }
+
+  .stack-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .stack-header p {
+    font-size: 1rem;
+    margin-top: 25px;
+  }
+
+  .stack-categories {
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .stack-category {
+    flex: 1 1 220px;
+  }
+
+  .stack-category h4 {
+    font-size: 1rem;
+  }
+
   .tech-icon {
-    font-size: 1.7rem;
+    font-size: 2rem;
+    margin: 0.5rem;
   }
 }
 
-/* Tablette */
-@media (max-width: 900px) {
-  .tech-icon {
-    font-size: 1.5rem;
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .tech-icon {
-    font-size: 1.3rem;
-  }
-}
-
-/* Très petit mobile */
-@media (max-width: 400px) {
-  .tech-icon {
-    font-size: 1.1rem;
-  }
-}
+/* Note: Au-delà de 1366px, on garde les valeurs d'origine (4rem 20rem) 
+   qui sont déjà définies dans les styles de base */

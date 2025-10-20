@@ -1,168 +1,418 @@
+/* ExperienceSection.css */
+
+/* ============================================
+   STYLES DE BASE (Desktop par défaut)
+   ============================================ */
+
 /* Conteneur principal */
 .experience-section {
-    display: flex;
-    flex-direction: row;
-    padding: 10rem 20rem 6rem 20rem;
-    gap: 12rem;
+  display: flex;
+  flex-direction: row;
+  padding: 10rem 20rem 6rem 20rem;
+  gap: 12rem;
+}
+
+/* Partie gauche avec le titre et description */
+.experience-left {
+  flex: 1;
+}
+
+.experience-left h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.experience-left p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  width: 115%;
+}
+
+.button-cv {
+  margin-top: 3rem;
+}
+
+/* Partie droite avec la timeline */
+.experience-right {
+  flex: 2;
+  position: relative;
+}
+
+/* Ligne verticale */
+.timeline {
+  position: relative;
+  border-left: 2px solid #ccc;
+  height: 80%;
+}
+
+/* Élément de la timeline */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+/* Point central */
+.timeline-dot {
+  position: absolute;
+  left: -26px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.timeline-dot img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* Contenu de chaque carte */
+.timeline-content {
+  position: relative;
+  margin-left: 3rem;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: solid 1px #ccc;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 1.2rem;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 12px solid #ccc;
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  color: var(--first-color);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 4px 12px;
+  border-radius: 12px;
+  gap: 10px;
+  border: solid 1px #a0a0a0;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   RESPONSIVE - Aligné sur HeroSection
+   ============================================ */
+
+/* MOBILE : ≤ 600px */
+@media (max-width: 600px) {
+  .experience-section {
+    flex-direction: column;
+    padding: 3rem 1rem; /* cohérent avec stack-section mobile */
+    gap: 2.5rem;
   }
 
-  /* Partie gauche avec le titre et description */
+  /* Partie gauche */
   .experience-left {
-    flex: 1;
+    width: 100%;
+    text-align: center;
   }
-  
+
   .experience-left h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* similaire stack h3 mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-left p {
+    font-size: 0.95rem; /* cohérent avec autres sections */
+    width: 100%; /* supprime le 115% qui déborde */
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .button-cv {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Partie droite - Timeline */
+  .experience-right {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .timeline {
+    border-left: 2px solid #ccc;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-dot {
+    left: -20px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .timeline-content {
+    margin-left: 2rem;
+    padding: 1rem;
+  }
+
+  .timeline-content::before {
+    top: 1rem;
+    left: -10px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 10px solid #ccc;
+  }
+
+  .timeline-content h4 {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+
+  .timeline-content span {
+    font-size: 0.85rem;
+  }
+
+  .content-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .badge {
+    margin-bottom: 0;
+    padding: 3px 10px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+}
+
+/* TABLETTE : 601px - 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .experience-section {
+    flex-direction: column;
+    padding: 4rem 3rem; /* cohérent avec stack tablette */
+    gap: 3rem;
+  }
+
+  .experience-left {
+    width: 100%;
+  }
+
+  .experience-left h3 {
+    font-size: 1.8rem; /* cohérent avec autres sections tablette */
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-left p {
+    font-size: 1.05rem;
+    width: 100%;
+    line-height: 1.6;
+  }
+
+  .button-cv {
+    margin-top: 2.5rem;
+  }
+
+  .experience-right {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .timeline {
+    margin-left: 1.5rem;
+    height: auto;
+  }
+
+  .timeline-item {
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-dot {
+    left: -24px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .timeline-content {
+    margin-left: 2.5rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.05rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
+  }
+
+  .content-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .badge {
+    margin-bottom: 0;
+  }
+}
+
+/* DESKTOP : 1025px - 1365px */
+@media (min-width: 1025px) and (max-width: 1365px) {
+  .experience-section {
+    padding: 5rem 6rem 4rem 6rem; /* cohérent avec stack desktop */
+    gap: 4rem;
+  }
+
+  .experience-left h3 {
+    font-size: 2rem; /* cohérent avec h2 desktop */
     margin-bottom: 2rem;
   }
-  
+
   .experience-left p {
     font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    width: 115%;
+    width: 100%; /* évite le débordement */
+  }
+
+  .button-cv {
+    margin-top: 2.5rem;
+  }
+
+  .timeline {
+    height: 80%;
+  }
+
+  .timeline-item {
+    margin-bottom: 3rem;
+  }
+
+  .timeline-dot {
+    left: -26px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline-content {
+    margin-left: 3rem;
+  }
+
+  /* Badge passe au-dessus du titre sur écrans moyens */
+  .content-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .badge {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* LARGE DESKTOP : 1366px - 1779px */
+@media (min-width: 1366px) and (max-width: 1779px) {
+  .experience-section {
+    padding: 8rem 16rem;
+    gap: 6rem;
+  }
+
+  .experience-left h3 {
+    font-size: 1,8rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience-left p {
+    font-size: 1rem;
+    width: 100%;
   }
 
   .button-cv {
     margin-top: 3rem;
   }
 
-  
-  /* Partie droite avec la timeline */
-  .experience-right {
-    flex: 2;
-    position: relative;
-  }
-  
-  /* Ligne verticale */
-  .timeline {
-    position: relative;
-    border-left: 2px solid #ccc;
-    height: 80%;
-  }
-  
-  /* Élément de la timeline */
-  .timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-  }
-  
-  /* Point central */
-  .timeline-dot {
-    position: absolute;
-    left: -26px;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border: 3px solid #ffffff;
-    border-radius: 50%;
-    overflow: hidden;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  
-  }
-  
-  .timeline-dot img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-  }
-  
-  
-  /* Contenu de chaque carte */
-  .timeline-content {
-    position: relative;
-    margin-left: 3rem;
-    padding: 1rem 1.5rem;
-    background: #fff;
-    border-radius: 8px;
-    /* box-shadow: 0 0 0 1px #ddd; */
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border: solid 1px #ccc;
-  }
-  
-  .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 1.2rem;
-    left: -12px;
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 12px solid #ccc;  /* couleur du triangle de timeline-content vers timeline-dot */
-  }
-  
-  .timeline-content h4 {
-    font-size: 1.1rem;
-    color: var(--first-color);
-    margin-bottom: 0.3rem;
-    font-weight: 500;
-  }
-  
-  .timeline-content p {
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 0.5rem;
-  }
-  
-  .timeline-content span {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  .badge {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 4px 12px;
-    border-radius: 12px;
-    gap: 10px;
-    border: solid 1px #a0a0a0;
-    gap: 10px;
-  }
-  
+  /* Badge passe au-dessus du titre */
   .content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* gap: 1rem; */
-    flex-wrap: wrap; /* permet de passer à la ligne pour jouer avec les media-query */
-  }
-  
-
-  /* Responsive */
-
-  @media (max-width: 1780px) {
-    .content-header {
-      flex-direction: column-reverse; /* la badge passe au dessus du titre (interversion) */
-      align-items: flex-start; /* aligne à gauche */
-    }
-  
-    .badge {
-      margin-bottom: 0.5rem; /* espace sous le badge */
-    }
-
-    @media (max-width: 1400px) {
-  .experience-section {
-    flex-direction: column; /* empile les parties gauche et droite */
-    gap: 3rem;
+    flex-direction: column-reverse;
+    align-items: flex-start;
   }
 
-  .experience-left,
-  .experience-right {
-    width: 100%; /* s'assure que chaque partie prend toute la largeur */
-  }
-
-  .experience-right {
-    margin-top: 3rem; /* petit espace entre les deux sections */
+  .badge {
+    margin-bottom: 0.5rem;
   }
 }
 
-
-
+/* EXTRA LARGE : ≥ 1780px */
+@media (min-width: 1780px) {
+  .experience-section {
+    padding: 6rem 15rem 5rem 15rem; /* cohérent avec stack extra large */
+    gap: 8rem;
   }
-  
+
+  .experience-left h3 {
+    font-size: 2.2rem;
+  }
+
+  .experience-left p {
+    width: 115%; /* conserve le style original sur très grands écrans */
+  }
+
+  /* Badge revient à droite du titre sur très grands écrans */
+  .content-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .badge {
+    margin-bottom: 0;
+  }
+}
+
+/* ULTRA LARGE : ≥ 1920px */
+@media (min-width: 1920px) {
+  .experience-section {
+    padding: 6rem 20rem 5rem 20rem;
+    gap: 12rem; /* valeur d'origine */
+  }
+}

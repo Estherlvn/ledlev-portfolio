@@ -10,7 +10,7 @@ const projects = [
     image: '/assets/projects/dsr-picture.png',
     imageAlt: 'Aperçu Digital Sales Room',
     // github: 'https://github.com/Estherlvn/dsr',
-    external: 'https://exemple.com/dsr'
+    // external: 'https://exemple.com/dsr'
   },
   {
     title: 'LocalHub - Promouvoir la scène locale',
@@ -21,7 +21,7 @@ const projects = [
     image: '/assets/projects/localhub-picture.png',
     imageAlt: 'Aperçu LocalHub',
     github: 'https://github.com/Estherlvn/LocalHub_App',
-    external: 'https://exemple.com/localhub'
+    // external: 'https://exemple.com/localhub'
   },
   {
     title: 'Quiz Tech - Test de connaissance en ligne',
@@ -32,7 +32,7 @@ const projects = [
     image: '/assets/projects/quiztech-picture.png',
     imageAlt: 'Aperçu Quiz Tech',
     github: 'https://github.com/Estherlvn/quiz-tech',
-    external: 'https://exemple.com/quiztech'
+    // external: 'https://exemple.com/quiztech'
   }
 ];
 
@@ -41,7 +41,7 @@ export default function ProjectSection() {
     <section className="projects-section" id="projects">
       <div className="projects-head">
         <h3>Projets</h3>
-        <a className="see-all" href="https://github.com/ton-compte?tab=repositories" target="_blank" rel="noopener noreferrer">
+        <a className="see-all" href="https://github.com/Estherlvn?tab=repositories" target="_blank" rel="noopener noreferrer">
           Voir tout
         </a>
       </div>
