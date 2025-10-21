@@ -237,7 +237,7 @@
 /* TABLETTE : 601px - 1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
   .projects-section {
-    padding: 4rem 3rem 0 3rem; /* cohérent avec stack tablette */
+    padding: 2rem 8rem;
   }
 
   .projects-head {
@@ -261,7 +261,7 @@
 
   .project-thumb {
     width: 70%;
-    max-width: 360px;
+    max-width: 230px;
     margin: 0;
     justify-self: start; /* Alignement à gauche sur tablette */
   }
@@ -295,11 +295,11 @@
 /* DESKTOP : 1025px - 1365px */
 @media (min-width: 1025px) and (max-width: 1365px) {
   .projects-section {
-    padding: 5rem 6rem 0 6rem; /* cohérent avec autres sections desktop */
+    padding: 6rem 12rem;
   }
 
   .projects-head h3 {
-    font-size: 2rem; /* cohérent avec h2 desktop */
+    font-size: 1.8rem;
   }
 
   /* Layout horizontal revient */
@@ -326,7 +326,7 @@
 /* LARGE DESKTOP : 1366px - 1919px */
 @media (min-width: 1366px) and (max-width: 1919px) {
   .projects-section {
-    padding: 8rem 16rem;
+    padding: 6rem 16rem;
   }
 
   .projects-head h3 {

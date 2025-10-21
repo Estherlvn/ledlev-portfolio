@@ -152,8 +152,9 @@
   }
 
   .experience-left h3 {
-    font-size: 1.5rem; /* similaire stack h3 mobile */
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
+    text-align: left;
   }
 
   .experience-left p {
@@ -164,9 +165,9 @@
   }
 
   .button-cv {
-    margin-top: 2rem;
+    margin: 2rem 0 2rem;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   /* Partie droite - Timeline */
@@ -234,7 +235,7 @@
 @media (min-width: 601px) and (max-width: 1024px) {
   .experience-section {
     flex-direction: column;
-    padding: 4rem 3rem; /* cohérent avec stack tablette */
+    padding: 8rem 8rem;
     gap: 3rem;
   }
 
@@ -304,12 +305,12 @@
 /* DESKTOP : 1025px - 1365px */
 @media (min-width: 1025px) and (max-width: 1365px) {
   .experience-section {
-    padding: 5rem 6rem 4rem 6rem; /* cohérent avec stack desktop */
+    padding: 6rem 12rem;
     gap: 4rem;
   }
 
   .experience-left h3 {
-    font-size: 2rem; /* cohérent avec h2 desktop */
+    font-size: 1.8rem;
     margin-bottom: 2rem;
   }
 
@@ -354,7 +355,7 @@
 /* LARGE DESKTOP : 1366px - 1779px */
 @media (min-width: 1366px) and (max-width: 1779px) {
   .experience-section {
-    padding: 8rem 16rem;
+    padding: 6rem 16rem;
     gap: 6rem;
   }
 
