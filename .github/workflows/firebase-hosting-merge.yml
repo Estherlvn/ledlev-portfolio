@@ -12,6 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm run build
+        env:
+          VITE_FIREBASE_API_KEY=AIzaSyDjgEH9rOy471WECCpfdfQ18dGWoMTL-LY
+          VITE_FIREBASE_AUTH_DOMAIN=ledlev-portfolio.firebaseapp.com
+          VITE_FIREBASE_PROJECT_ID=ledlev-portfolio
+          VITE_FIREBASE_STORAGE_BUCKET=ledlev-portfolio.firebasestorage.app
+          VITE_FIREBASE_MESSAGING_SENDER_ID=675776320600
+          VITE_FIREBASE_APP_ID=1:675776320600:web:f41fb5f33cc29fe549a62d
+          VITE_FIREBASE_MEASUREMENT_ID=G-HPQ3C30590
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
